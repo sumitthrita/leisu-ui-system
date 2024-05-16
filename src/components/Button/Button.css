@@ -1,6 +1,18 @@
-button {
+.lus_button {
     padding: 8px 12px;
     border-radius: 8px;
     border: 1px solid blue;
     color: #000;
+}
+
+.lus_button__small {
+    font-size: 12px;
+}
+
+.lus_button__medium {
+    font-size: 16px;
+}
+
+.lus_button__large {
+    font-size: 24px;
 }
