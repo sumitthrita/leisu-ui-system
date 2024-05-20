@@ -24,7 +24,13 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json', exclude: ['**/*.test.tsx', '**/*.test.ts', '**/*.stories.ts'] }),
-      postcss({ extensions: ['.css'], inject: true, extract: false }),
+      postcss({
+        getExportNamed: false,
+        getExport (id) {
+          return cssExportMap[id];
+        },
+        extract: 'styles.css',
+      }),
     ],
   },
   {
