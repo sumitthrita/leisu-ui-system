@@ -39,4 +39,18 @@ export default [
     plugins: [dts()],
     external: [/\.css$/],
   },
+  {
+    input: 'dist/esm/styles.css',
+    output: [{ file: 'dist/styles.css', format: 'esm' }],
+    plugins: [
+      postcss({
+        getExportNamed: false,
+        getExport (id) {
+          return cssExportMap[id];
+        },
+        extract: 'styles.css',
+      }),
+    ],
+    external: [/\.css$/],
+  },
 ];
