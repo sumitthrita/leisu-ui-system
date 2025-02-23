@@ -3,8 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
-import { readFileSync } from 'fs';
-const packageJson = JSON.parse(readFileSync('./package.json'));
+import packageJson from './package.json' assert { type: 'json' };
 
 export default [
   {
@@ -26,10 +25,11 @@ export default [
       commonjs(),
       typescript({ tsconfig: './tsconfig.json', exclude: ['**/*.test.tsx', '**/*.test.ts', '**/*.stories.ts'] }),
       postcss({
+        getExportNamed: false,
+        getExport (id) {
+          return cssExportMap[id];
+        },
         extract: 'styles.css',
-        modules: true,
-        use: ['sass'],
-        extensions: ['.css', '.scss'],
       }),
     ],
   },
@@ -44,10 +44,11 @@ export default [
     output: [{ file: 'dist/styles.css', format: 'esm' }],
     plugins: [
       postcss({
+        getExportNamed: false,
+        getExport (id) {
+          return cssExportMap[id];
+        },
         extract: 'styles.css',
-        modules: true,
-        use: ['sass'],
-        extensions: ['.css', '.scss'],
       }),
     ],
     external: [/\.css$/],
