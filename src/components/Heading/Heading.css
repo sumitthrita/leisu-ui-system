@@ -1,0 +1,20 @@
+.lus_heading {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.lus_heading__small {
+    font-size: 12px;
+    color: green;
+}
+
+.lus_heading__medium {
+    font-size: 16px;
+    color: #000;
+}
+
+.lus_heading__large {
+    font-size: 24px;
+    color: red;
+}
