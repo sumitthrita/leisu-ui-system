@@ -1,0 +1,83 @@
+@use '../../styles/leisu-styles/leisu.scss' as *;
+
+.leisu-typography {
+  display: block;
+  font-weight: 400;
+  margin: 0;
+  font-family: Nunito;
+
+  // Font weights
+  &.regular {
+    font-weight: $regular;
+  }
+
+  &.bold {
+    font-weight: $bold;
+  }
+
+  &.extraBold {
+    font-weight: $extra-bold;
+  }
+
+  // Text styles
+  &.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
+
+  &.capitalize {
+    text-transform: uppercase;
+  }
+
+  &.lineThrough {
+    text-decoration: line-through;
+  }
+
+  // Desktop sizes (default)
+  &.size-h1 { font-size: 3rem; line-height: 4rem; }
+  &.size-h2 { font-size: 2.25rem; line-height: 3rem; }
+  &.size-h3 { font-size: 2rem; line-height: 2.75rem; }
+  &.size-h4 { font-size: 1.75rem; line-height: 2.5rem; }
+  &.size-h5 { font-size: 1.5rem; line-height: 2rem; }
+  &.size-h6 { font-size: 1.25rem; line-height: 1.75rem; }
+  &.size-b1 { font-size: 1.125rem; line-height: 1.5rem; }
+  &.size-b2 { font-size: 1rem; line-height: 1.5rem; }
+  &.size-b3 { font-size: 0.875rem; line-height: 1.25rem; }
+  &.size-b4 { font-size: 0.75rem; line-height: 1rem; }
+  &.size-b5 { font-size: 0.6rem; line-height: 0.875rem; }
+
+  // Tablet sizes (768px - 1024px)
+  @media screen and (max-width: 1024px) {
+    &.size-h1 { font-size: 2.5rem; line-height: 3.5rem; }
+    &.size-h2 { font-size: 2rem; line-height: 2.75rem; }
+    &.size-h3 { font-size: 1.75rem; line-height: 2.5rem; }
+    &.size-h4 { font-size: 1.5rem; line-height: 2rem; }
+    &.size-h5 { font-size: 1.25rem; line-height: 1.75rem; }
+    &.size-h6 { font-size: 1.125rem; line-height: 1.5rem; }
+    &.size-b1 { font-size: 1rem; line-height: 1.375rem; }
+    &.size-b2 { font-size: 0.875rem; line-height: 1.25rem; }
+    &.size-b3 { font-size: 0.75rem; line-height: 1rem; }
+    &.size-b4 { font-size: 0.625rem; line-height: 0.875rem; }
+    &.size-b5 { font-size: 0.5rem; line-height: 0.75rem; }
+  }
+
+  // Mobile sizes (< 768px)
+  @media screen and (max-width: 767px) {
+    &.size-h1 { font-size: 2rem; line-height: 3rem; }
+    &.size-h2 { font-size: 1.75rem; line-height: 2.5rem; }
+    &.size-h3 { font-size: 1.5rem; line-height: 2rem; }
+    &.size-h4 { font-size: 1.25rem; line-height: 1.75rem; }
+    &.size-h5 { font-size: 1.125rem; line-height: 1.5rem; }
+    &.size-h6 { font-size: 1rem; line-height: 1.375rem; }
+    &.size-b1 { font-size: 0.875rem; line-height: 1.25rem; }
+    &.size-b2 { font-size: 0.75rem; line-height: 1rem; }
+    &.size-b3 { font-size: 0.625rem; line-height: 0.875rem; }
+    &.size-b4 { font-size: 0.5rem; line-height: 0.75rem; }
+    &.size-b5 { font-size: 0.4375rem; line-height: 0.625rem; }
+  }
+}
