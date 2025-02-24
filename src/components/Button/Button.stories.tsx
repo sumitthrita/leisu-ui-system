@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import Button from './Button';
 import { Size, State, Variant, Width } from './propTypes';
 
@@ -203,5 +204,13 @@ export const ComplexSecondary: Story = {
     size: Size.Medium,
     label: 'Next Step',
     trailingIcon: <ArrowRightIcon />,
+  },
+};
+
+export const WithOnClick: Story = {
+  args: {
+    variant: Variant.Primary,
+    label: 'Click Me',
+    onClick: action('button-click'),
   },
 };

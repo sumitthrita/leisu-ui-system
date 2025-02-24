@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, MouseEventHandler } from 'react';
 import './Button.css';
 import { Size, State, Variant, Width } from './propTypes';
 
@@ -11,6 +11,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     leadingIcon?: ReactElement;
     trailingIcon?: ReactElement;
     iconOnly?: ReactElement;
+    onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 const Button: React.FC<ButtonProps> = ({ 
