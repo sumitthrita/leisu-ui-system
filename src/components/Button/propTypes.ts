@@ -5,11 +5,9 @@ export enum Variant {
 }
 
 export enum Size {
-  XSmall = "xsmall",
   Small = "small",
   Medium = "medium",
   Large = "large",
-  XL = "xl",
 }
 
 export enum Width {
@@ -18,13 +16,7 @@ export enum Width {
 }
 
 export enum State {
-  Enabled = "enabled",
+  Default = "default",
+  Hover = "hover",
   Disabled = "disabled",
-}
-
-export enum Design {
-  Square = "square",
-  Curved =  "curved",
-  Circular = "circular",
-  Threed = "threed"
 }

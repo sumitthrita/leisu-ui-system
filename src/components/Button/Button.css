@@ -1,27 +1,106 @@
 .lus_button {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid blue;
-    color: #000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    border-radius: 6px;
 }
 
-.lus_button__xsmall {
-    font-size: 8px;
-}
-
+/* Sizes */
 .lus_button__small {
-    font-size: 12px;
+    padding: 8px 16px;
+    font-size: 14px;
+    height: 32px;
 }
 
 .lus_button__medium {
+    padding: 12px 20px;
     font-size: 16px;
+    height: 40px;
 }
 
 .lus_button__large {
-    font-size: 24px;
+    padding: 14px 24px;
+    font-size: 18px;
+    height: 48px;
 }
 
-.lus_button__xl {
-    font-size: 28px;
+/* Variants */
+.lus_button__primary {
+    background-color: #3ABEF9;
+    color: #ffffff;
 }
 
+.lus_button__primary:not(:disabled):hover,
+.lus_button__primary.lus_button__hover {
+    background-color: #0BA7F0;
+}
+
+.lus_button__secondary {
+    background-color: #F0F0F0;
+    color: #333333;
+}
+
+.lus_button__secondary:not(:disabled):hover,
+.lus_button__secondary.lus_button__hover {
+    background-color: #E0E0E0;
+}
+
+.lus_button__ghost {
+    background-color: transparent;
+    color: #3ABEF9;
+    border: 1px solid #3ABEF9;
+}
+
+.lus_button__ghost:not(:disabled):hover,
+.lus_button__ghost.lus_button__hover {
+    background-color: rgba(58, 190, 249, 0.1);
+}
+
+/* States */
+.lus_button__disabled,
+.lus_button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Width */
+.lus_button__full {
+    width: 100%;
+}
+
+.lus_button__auto {
+    width: auto;
+}
+
+/* Icon styles */
+.lus_button__icon-only {
+    padding: 8px;
+    aspect-ratio: 1;
+}
+
+.lus_button__small.lus_button__icon-only {
+    padding: 6px;
+}
+
+.lus_button__large.lus_button__icon-only {
+    padding: 10px;
+}
+
+.lus_button__leading-icon,
+.lus_button__trailing-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lus_button__leading-icon svg,
+.lus_button__trailing-icon svg {
+    width: 1.2em;
+    height: 1.2em;
+}
