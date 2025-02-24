@@ -18,5 +18,7 @@ export enum Width {
 export enum State {
   Default = "default",
   Hover = "hover",
+  Focus = "focus",
+  Active = "active",
   Disabled = "disabled",
 }

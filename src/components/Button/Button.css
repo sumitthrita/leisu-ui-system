@@ -63,10 +63,40 @@
 }
 
 /* States */
+.lus_button:focus-visible,
+.lus_button.lus_button__focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(58, 190, 249, 0.5);
+}
+
+.lus_button:active,
+.lus_button.lus_button__active {
+    transform: scale(0.98);
+}
+
+/* Primary button states */
+.lus_button__primary:active,
+.lus_button__primary.lus_button__active {
+    background-color: #0996d6;
+}
+
+/* Secondary button states */
+.lus_button__secondary:active,
+.lus_button__secondary.lus_button__active {
+    background-color: #d0d0d0;
+}
+
+/* Ghost button states */
+.lus_button__ghost:active,
+.lus_button__ghost.lus_button__active {
+    background-color: rgba(58, 190, 249, 0.2);
+}
+
 .lus_button__disabled,
 .lus_button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    transform: none !important;
 }
 
 /* Width */

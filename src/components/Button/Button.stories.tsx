@@ -98,11 +98,62 @@ export const Hover: Story = {
   },
 };
 
+export const Focus: Story = {
+  args: {
+    label: 'Focus State',
+    state: State.Focus,
+  },
+};
+
+export const Active: Story = {
+  args: {
+    label: 'Active State',
+    state: State.Active,
+  },
+};
+
 export const Disabled: Story = {
   args: {
     label: 'Disabled Button',
     state: State.Disabled,
   },
+};
+
+// State variations with different variants
+export const PrimaryStates: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+      <Button variant={Variant.Primary} label="Default" />
+      <Button variant={Variant.Primary} state={State.Hover} label="Hover" />
+      <Button variant={Variant.Primary} state={State.Focus} label="Focus" />
+      <Button variant={Variant.Primary} state={State.Active} label="Active" />
+      <Button variant={Variant.Primary} state={State.Disabled} label="Disabled" />
+    </div>
+  ),
+};
+
+export const SecondaryStates: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+      <Button variant={Variant.Secondary} label="Default" />
+      <Button variant={Variant.Secondary} state={State.Hover} label="Hover" />
+      <Button variant={Variant.Secondary} state={State.Focus} label="Focus" />
+      <Button variant={Variant.Secondary} state={State.Active} label="Active" />
+      <Button variant={Variant.Secondary} state={State.Disabled} label="Disabled" />
+    </div>
+  ),
+};
+
+export const GhostStates: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+      <Button variant={Variant.Ghost} label="Default" />
+      <Button variant={Variant.Ghost} state={State.Hover} label="Hover" />
+      <Button variant={Variant.Ghost} state={State.Focus} label="Focus" />
+      <Button variant={Variant.Ghost} state={State.Active} label="Active" />
+      <Button variant={Variant.Ghost} state={State.Disabled} label="Disabled" />
+    </div>
+  ),
 };
 
 // Width variations
